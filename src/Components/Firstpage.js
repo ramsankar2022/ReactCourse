@@ -1,32 +1,11 @@
 import React from "react";
 
-let a = 100;
-let b = 100;
-
-export default class FirstPage extends React.Component {
-  bgFormat = {
-    backgroundColor: "#fffff",
-  };
-
-  showContent = () => {
-    a = a + 200;
-    b = b + 500;
-    console.log(a);
-    console.log(b);
-  };
+export default class FirstPage extends React.Component { 
 
   render() {      
-    return (
-        
-      <div style={this.bgFormat}>
-        Welcome to my first page
-        <div>
-          <button onClick={this.showContent}>Click Here</button>
-        </div>
-        {a}
-        <br />
-        {b}
-        <br />
+    return (        
+      <div >
+        <h1>Welcome to my first page </h1>      
       </div>
     );
   }
