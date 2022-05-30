@@ -10,8 +10,17 @@ export default class Timer extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
-        <h2>DIV COLOR CHANGE </h2>
+      <div style={{
+        marginLeft: 500,
+        marginTop: 50,
+        borderColor: "black",
+        borderStyle: "solid",
+        padding:10,
+        width:400,
+        textAlign:"center"
+      }}>
+        <h1>ASSIGNMENT 3</h1>
+        <h3>DIV COLOR CHANGE </h3>
         <div style={{ textAlign: "center" }}>
           <div
             id="div1"

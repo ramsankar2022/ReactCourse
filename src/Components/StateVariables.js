@@ -10,8 +10,17 @@ class StateVariables extends React.Component {
     let inpColor = "";
 
     return (
-      <>
-        <div>
+      <div style={{
+        marginLeft: 500,
+        marginTop: 50,
+        borderColor: "black",
+        borderStyle: "solid",
+        padding:10,
+        width:400,
+        textAlign:"center"
+      }}>
+        <div style={{ textAlign: "center" }}>
+          <h1>ASSIGNMENT 2 </h1>
           <h3>Textbox Onchange Event</h3>
           <div style={{ backgroundColor: this.state.color1, width: 400 }}>
             <input
@@ -22,9 +31,8 @@ class StateVariables extends React.Component {
             />
           </div>
         </div>
-        <br />
-        <hr />
-        <div>
+
+        <div style={{ textAlign: "center" }}>
           <h3>Enter color and Click the button </h3>
 
           <div style={{ backgroundColor: this.state.color2, width: 400 }}>
@@ -42,7 +50,8 @@ class StateVariables extends React.Component {
             </button>
           </div>
         </div>
-      </>
+        <br />
+      </div>
     );
   }
 }

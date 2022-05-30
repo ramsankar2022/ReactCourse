@@ -36,8 +36,17 @@ export default class ParentComponent extends Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }}>
-        <h2>LIFECYCLE EXAMPLE</h2>
+      <div style={{
+        marginLeft: 500,
+        marginTop: 50,
+        borderColor: "black",
+        borderStyle: "solid",
+        padding:10,
+        width:400,
+        textAlign:"center"
+      }}>
+         <h1>ASSIGNMENT 4</h1>
+        <h3>LIFECYCLE EXAMPLE</h3>
         <button onClick={this.showComponent}> Timer</button>
         {this.state.isActive && (
           <p style={{ paddingTop: 0, marginTop: 0 }}>
