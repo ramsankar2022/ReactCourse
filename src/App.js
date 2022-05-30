@@ -1,5 +1,7 @@
-import FirstPage from "./Components/Firstpage";
-import StateVariables from "./Components/StateVariables";
+// import FirstPage from "./Components/Firstpage";
+// import StateVariables from "./Components/StateVariables";
+import ParentComponent from './Components/LifeCycle/ParentComponent'
+import ChangeDivColor from './Components/ChangeDivColor'
 
 function App() {
   return (
@@ -15,8 +17,11 @@ function App() {
         textAlign:"left"
       }}
     >
-      <FirstPage />
-      <StateVariables />
+      {/* <FirstPage />
+      <StateVariables /> */}
+      <ParentComponent />      
+      <hr />
+      <ChangeDivColor />
     </div>
   );
 }
