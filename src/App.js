@@ -15,9 +15,9 @@ function App() {
       <ChangeDivColor />
       <hr />
       <ParentComponent />
-      <br />
+      <hr />
       <APIRequest />
-      <br />
+      <hr />
       <Login />
     </div>
   );
