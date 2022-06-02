@@ -58,7 +58,7 @@ export default class Login extends Component {
   render() {
     return (
       <div style={this.state.divStyle}>
-        <h1>ASSIGNMENT 6</h1>
+        <h2>ASSIGNMENT 3 - PART 2</h2>
         <h3>Login Form</h3>
 
         <form>

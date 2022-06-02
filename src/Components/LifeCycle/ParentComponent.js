@@ -45,7 +45,7 @@ export default class ParentComponent extends Component {
         width:400,
         textAlign:"center"
       }}>
-         <h1>ASSIGNMENT 4</h1>
+         <h2>ASSIGNMENT 2 - PART 2</h2>
         <h3>LIFECYCLE EXAMPLE</h3>
         <button onClick={this.showComponent}> Timer</button>
         {this.state.isActive && (

@@ -19,7 +19,7 @@ export default class Timer extends React.Component {
         width:400,
         textAlign:"center"
       }}>
-        <h1>ASSIGNMENT 3</h1>
+        <h2>ASSIGNMENT 2 - PART 1</h2>
         <h3>DIV COLOR CHANGE </h3>
         <div style={{ textAlign: "center" }}>
           <div

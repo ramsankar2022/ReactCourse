@@ -10,17 +10,19 @@ class StateVariables extends React.Component {
     let inpColor = "";
 
     return (
-      <div style={{
-        marginLeft: 500,
-        marginTop: 50,
-        borderColor: "black",
-        borderStyle: "solid",
-        padding:10,
-        width:400,
-        textAlign:"center"
-      }}>
+      <div
+        style={{
+          marginLeft: 500,
+          marginTop: 10,
+          borderColor: "black",
+          borderStyle: "solid",
+          padding: 10,
+          width: 400,
+          textAlign: "center",
+        }}
+      >
+        <h2>ASSIGNMENT 1 </h2>
         <div style={{ textAlign: "center" }}>
-          <h1>ASSIGNMENT 2 </h1>
           <h3>Textbox Onchange Event</h3>
           <div style={{ backgroundColor: this.state.color1, width: 400 }}>
             <input

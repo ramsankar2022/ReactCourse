@@ -4,21 +4,24 @@ import ParentComponent from "./Components/LifeCycle/ParentComponent";
 import ChangeDivColor from "./Components/ChangeDivColor";
 import APIRequest from "./Components/APIRequest";
 import Login from "./Components/Login";
+import MaterialUISample from "./Components/MaterialUISample";
 
 function App() {
   return (
     <div>
       <FirstPage />
-      <hr />
+
       <StateVariables />
-      <hr />
+
       <ChangeDivColor />
-      <hr />
+
       <ParentComponent />
-      <hr />
+
       <APIRequest />
-      <hr />
+
       <Login />
+
+      <MaterialUISample />
     </div>
   );
 }

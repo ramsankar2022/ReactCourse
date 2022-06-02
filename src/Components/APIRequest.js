@@ -76,7 +76,7 @@ export default class APIRequest extends React.Component {
   render() {
     return (
       <div style={this.state.divStyle}>
-        <h1>ASSIGNMENT 5</h1>
+        <h2>ASSIGNMENT 3 - PART 1</h2>
         <h3>API CALLS </h3>
         <h3>Users List</h3>
 
