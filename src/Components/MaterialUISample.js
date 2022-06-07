@@ -10,6 +10,8 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import { Grid } from "@mui/material";
+import Item from "@mui/material/Grid";
 
 export default class MaterialUISample extends React.Component {
   state = {
@@ -123,77 +125,106 @@ export default class MaterialUISample extends React.Component {
 
   render() {
     return (
-      <div style={this.state.divStyle}>
-        <h2>ASSIGNMENT 4</h2>
-        <h3>Material UI Designs</h3>
-        <h3>Users List</h3>
-        <Box sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
-          <List>{this.state.users.map(this.showUsers)}</List>
-          <Button
-            variant="contained"
-            size="small"
-            color="secondary"
-            onClick={this.getUsers}
-          >
-            REFRESH USERS
-          </Button>
-          <Button
-            style={{ marginLeft: 10 }}
-            variant="outlined"
-            size="small"
-            color="secondary"
-            onClick={this.handleClickOpen}
-          >
-            CREATE USERS
-          </Button>
-          <Dialog open={this.state.showAddUser} onClose={this.handleClose}>
-            <DialogTitle>Create User</DialogTitle>
-            <DialogContent>
-              <DialogContentText>
-                Please enter the user details. All fields are mandatory.
-              </DialogContentText>
-              .
-              <TextField
-                autoFocus
-                margin="dense"
-                id="firstName"
-                label="First Name"
-                type="text"
-                fullWidth
-                variant="standard"
-                onChange={(e) => this.setState({ firstName: e.target.value })}
-                required
-              />
-              <TextField
-                autoFocus
-                margin="dense"
-                id="lastName"
-                label="Last Name"
-                type="text"
-                fullWidth
-                variant="standard"
-                onChange={(e) => this.setState({ lastName: e.target.value })}
-                required
-              />
-              <TextField
-                autoFocus
-                margin="dense"
-                id="email"
-                label="Email Address"
-                type="email"
-                fullWidth
-                variant="standard"
-                onChange={(e) => this.setState({ email: e.target.value })}
-                required
-              />
-            </DialogContent>
-            <DialogActions>
-              <Button onClick={this.handleClose}>Cancel</Button>
-              <Button onClick={this.CreateUsers}>Create</Button>
-            </DialogActions>
-          </Dialog>
-        </Box>
-      </div>
+      <Box
+        sx={{
+          width: 400,
+          height: "auto",
+          marginLeft: 50
+        }}
+      >
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Item>
+              <h3 style={{ textAlign: "center" }}>ASSIGNMENT 4</h3>
+            </Item>
+          </Grid>
+        </Grid>
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Item>
+              <h3 style={{ textAlign: "center" }}>Users List</h3>
+            </Item>
+          </Grid>
+        </Grid>
+        <hr />
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Item>
+              <List>{this.state.users.map(this.showUsers)}</List>
+            </Item>
+          </Grid>
+        </Grid>
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Item style={{textAlign: 'center'}}>
+              <Button
+                variant="contained"
+                size="small"
+                color="secondary"
+                onClick={this.getUsers}
+              >
+                REFRESH USERS
+              </Button>
+              <Button
+                style={{ marginLeft: 10 }}
+                variant="outlined"
+                size="small"
+                color="secondary"
+                onClick={this.handleClickOpen}
+              >
+                CREATE USERS
+              </Button>
+            </Item>
+          </Grid>
+        </Grid>
+
+        <Dialog open={this.state.showAddUser} onClose={this.handleClose}>
+          <DialogTitle>Create User</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              Please enter the user details. All fields are mandatory.
+            </DialogContentText>
+            .
+            <TextField
+              autoFocus
+              margin="dense"
+              id="firstName"
+              label="First Name"
+              type="text"
+              fullWidth
+              variant="standard"
+              onChange={(e) => this.setState({ firstName: e.target.value })}
+              required
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="lastName"
+              label="Last Name"
+              type="text"
+              fullWidth
+              variant="standard"
+              onChange={(e) => this.setState({ lastName: e.target.value })}
+              required
+            />
+            <TextField
+              autoFocus
+              margin="dense"
+              id="email"
+              label="Email Address"
+              type="email"
+              fullWidth
+              variant="standard"
+              onChange={(e) => this.setState({ email: e.target.value })}
+              required
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={this.handleClose}>Cancel</Button>
+            <Button onClick={this.CreateUsers}>Create</Button>
+          </DialogActions>
+        </Dialog>
+      </Box>
     );
   }
 }

@@ -1,4 +1,9 @@
 import React from "react";
+import Box from "@mui/material/Box";
+import { Grid } from "@mui/material";
+import Item from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 class StateVariables extends React.Component {
   state = {
@@ -10,50 +15,71 @@ class StateVariables extends React.Component {
     let inpColor = "";
 
     return (
-      <div
-        style={{
-          marginLeft: 500,
-          marginTop: 10,
-          borderColor: "black",
-          borderStyle: "solid",
-          padding: 10,
+      <Box
+        sx={{
           width: 400,
-          textAlign: "center",
+          height: "auto",
+          marginLeft: 50,
         }}
       >
-        <h2>ASSIGNMENT 1 </h2>
-        <div style={{ textAlign: "center" }}>
-          <h3>Textbox Onchange Event</h3>
-          <div style={{ backgroundColor: this.state.color1, width: 400 }}>
-            <input
-              type="text"
-              name="username"
-              placeholder="Enter the Color"
-              onChange={(e) => this.setState({ color1: e.target.value })}
-            />
-          </div>
-        </div>
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Item>
+              <h3 style={{ textAlign: "center" }}>ASSIGNMENT 1</h3>
+            </Item>
+          </Grid>
+        </Grid>
+        <Grid container spacing={4}>
+          <Grid item xs={12} style={{ textAlign: "center" }}>
+            <Item>
+              <h3>Textbox Onchange Event</h3>
+              <div
+                style={{
+                  backgroundColor: this.state.color1,
+                  width: 400,
+                  padding: 10,
+                }}
+              >
+                <TextField
+                  id="outlined-basic"
+                  label="Enter the Color"
+                  variant="outlined"
+                  onChange={(e) => this.setState({ color1: e.target.value })}
+                />
+              </div>
+            </Item>
+          </Grid>
+          <Grid item xs={12} style={{ textAlign: "center" }}>
+            <Item>
+              <h3>Enter color and Click the button </h3>
 
-        <div style={{ textAlign: "center" }}>
-          <h3>Enter color and Click the button </h3>
-
-          <div style={{ backgroundColor: this.state.color2, width: 400 }}>
-            <input
-              type="text"
-              name="user"
-              placeholder="Enter Color and submit it"
-              onChange={(e) => (inpColor = e.target.value)}
-            />
-            <button
-              name="submit"
-              onClick={(e) => this.setState({ color2: inpColor })}
-            >
-              Click Here
-            </button>
-          </div>
-        </div>
-        <br />
-      </div>
+              <div
+                style={{
+                  backgroundColor: this.state.color2,
+                  width: 400,
+                  minHeight: 100,
+                  padding: 10,
+                }}
+              >
+                <TextField
+                  id="outlined-basic"
+                  label="Enter the Color"
+                  variant="outlined"
+                  onChange={(e) => (inpColor = e.target.value)}
+                />
+                <br />
+                <Button
+                  style={{ marginTop: 5 }}
+                  variant="outlined"
+                  onClick={(e) => this.setState({ color2: inpColor })}
+                >
+                  Click Here
+                </Button>
+              </div>
+            </Item>
+          </Grid>
+        </Grid>
+      </Box>
     );
   }
 }

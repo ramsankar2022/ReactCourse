@@ -1,31 +1,20 @@
 import React, { Component } from "react";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import { Grid } from "@mui/material";
+import Item from "@mui/material/Grid";
+import TextField from "@mui/material/TextField";
+import Stack from '@mui/material/Stack';
 
 export default class Login extends Component {
   state = {
     email: "",
     password: "",
     message: "",
-    success: true,
-    divStyle: {
-      marginLeft: 500,
-      marginTop: 50,
-      borderColor: "black",
-      borderStyle: "solid",
-      padding: 10,
-      width: 400,
-      textAlign: "center",
-    },
-    btnStyle: {
-      margin: 10,
-      padding: 10,
-      borderRadius: 5,
-      backgroundColor: "darkblue",
-      color: "White",
-      fontWeight: "bold",
-      width: 150,
-      cursor: "pointer",
-    },
+    success: true    
   };
+
+
 
   signIn = () => {
     fetch("https://reqres.in/api/login", {
@@ -57,54 +46,79 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div style={this.state.divStyle}>
-        <h2>ASSIGNMENT 3 - PART 2</h2>
-        <h3>Login Form</h3>
+      <Box
+        sx={{
+          width: 400,
+          height: "auto",
+          marginLeft: 50,
+        }}
+      >
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Item>
+              <h3 style={{ textAlign: "center" }}>ASSIGNMENT 3 - PART 2</h3>
+            </Item>
+          </Grid>
+        </Grid>
+        <br />
+        <br />
 
-        <form>
-          <input
-            style={{ width: 300, borderRadius: 5, margin: 5, padding: 5 }}
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Enter the email"
-            onChange={(e) => this.setState({ email: e.target.value })}
-            required
-          />
-          <br />
-          <br />
-          <input
-            style={{ width: 300, borderRadius: 5, margin: 5, padding: 5 }}
-            type="Password"
-            name="password"
-            id="password"
-            placeholder="Enter the Password"
-            onChange={(e) => this.setState({ password: e.target.value })}
-            required
-          />
-          <br />
-          <br />
-          <input
-            style={this.state.btnStyle}
-            type="button"
-            name="signin"
-            id="signin"
-            value="Sign In"
-            onClick={(e) => {
-              e.preventDefault();
-              this.signIn();
-            }}
-          ></input>
-          <br />
-          {this.state.success && this.state.message !== "" ? (
-            <h4 style={{ color: "green" }}>{this.state.message}</h4>
-          ) : !this.state.success ? (
-            <h4 style={{ color: "red" }}>{this.state.message}</h4>
-          ) : (
-            ""
-          )}
-        </form>
-      </div>
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Item>
+              <form autoComplete="off">
+                <TextField
+                  style={{ width: 400 }}
+                  type="text"
+                  name="email"
+                  id="email"
+                  label="Enter the email"
+                  variant="outlined"
+                  onChange={(e) => this.setState({ email: e.target.value })}
+                  required
+                />
+                <br />
+                <br />
+                <TextField
+                  style={{ width: 400 }}
+                  type="Password"
+                  name="password"
+                  id="password"
+                  label="Enter the Password"
+                  variant="outlined"
+                  onChange={(e) => this.setState({ password: e.target.value })}
+                  required
+                />
+                <br />
+                <br />
+                <Button
+                  style={{ marginTop: 5, width: 400 }}
+                  variant="outlined"
+                  name="signin"
+                  id="signin"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    this.signIn();
+                  }}
+                >
+                  Sign In
+                </Button>                
+              </form>
+            </Item>
+          </Grid>
+        </Grid>
+        <Stack spacing={2}>
+          <Item style={{textAlign:'center'}}>
+            {this.state.success && this.state.message !== "" ? (
+              <h4 style={{ color: "green" }}>{this.state.message}</h4>
+            ) : !this.state.success ? (
+              <h4 style={{ color: "red" }}>{this.state.message}</h4>
+            ) : (
+              ""
+            )}
+          </Item>
+        </Stack>
+      </Box>
     );
   }
 }

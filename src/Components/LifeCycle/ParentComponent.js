@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import ChildComponent from "./ChildComponent";
+import Box from "@mui/material/Box";
+import { Grid } from "@mui/material";
+import Item from "@mui/material/Grid";
 
 export default class ParentComponent extends Component {
   state = {
@@ -36,29 +39,41 @@ export default class ParentComponent extends Component {
 
   render() {
     return (
-      <div style={{
-        marginLeft: 500,
-        marginTop: 50,
-        borderColor: "black",
-        borderStyle: "solid",
-        padding:10,
-        width:400,
-        textAlign:"center"
-      }}>
-         <h2>ASSIGNMENT 2 - PART 2</h2>
-        <h3>LIFECYCLE EXAMPLE</h3>
-        <button onClick={this.showComponent}> Timer</button>
-        {this.state.isActive && (
-          <p style={{ paddingTop: 0, marginTop: 0 }}>
-            (To Stop timer, press the timer button again!!!)
-          </p>
-        )}
-        <br />
-        <h3>Difference is {this.state.diff}</h3>
-        <h3>{this.state.timerMessage}</h3>
-        <br />
-        {this.state.isActive && <ChildComponent startTimer={this.startTimer} />}
-      </div>
+      <Box
+        sx={{
+          width: 400,
+          height: "auto",
+          marginLeft: 50,
+        }}
+      >
+        <Grid container spacing={4}>
+          <Grid item xs={12}>
+            <Item>
+              <h3 style={{ textAlign: "center" }}>ASSIGNMENT 2 (PART 2)</h3>
+            </Item>
+          </Grid>
+        </Grid>
+        <Grid container spacing={4}>
+          <Grid item xs={12} style={{ textAlign: "center" }}>
+            <Item>
+              <h3>LIFECYCLE EXAMPLE</h3>
+              <button onClick={this.showComponent}> Timer</button>
+              {this.state.isActive && (
+                <p style={{ paddingTop: 0, marginTop: 0 }}>
+                  (To Stop timer, press the timer button again!!!)
+                </p>
+              )}
+              <br />
+              <h3>Difference is {this.state.diff}</h3>
+              <h3>{this.state.timerMessage}</h3>
+              <br />
+              {this.state.isActive && (
+                <ChildComponent startTimer={this.startTimer} />
+              )}
+            </Item>
+          </Grid>
+        </Grid>
+      </Box>
     );
   }
 }
