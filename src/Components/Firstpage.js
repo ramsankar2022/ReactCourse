@@ -15,13 +15,7 @@ export default class FirstPage extends React.Component {
           marginLeft: 10,
         }}
       >
-        {/* <Grid container spacing={4}>
-          <Grid item xs={12}>
-            <Item>
-              <h3 style={{ textAlign: "center" }}>WELCOME TO REACT COURSE</h3>
-            </Item>
-          </Grid>
-        </Grid> */}
+
         <Grid container spacing={4}>
           <Grid item xs={6}>
             <Item>
@@ -29,7 +23,7 @@ export default class FirstPage extends React.Component {
               <hr />
               <p>
                 Part 1: Create an input. Type in a color and it should change
-                the background color of a div directly{" "}
+                the background color of a div directly
               </p>
               <p>
                 Part 2: The color of the div should change only when a button is

@@ -1,11 +1,12 @@
+import APIExample from "./Components/APIExample";
 import Routers from "./Components/Router";
 
-function App() {
+const App = () => {
   return (
     <div>
-      <Routers />
+      <Routers />      
     </div>
   );
-}
+};
 
 export default App;

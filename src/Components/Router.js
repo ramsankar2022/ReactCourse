@@ -9,6 +9,7 @@ import Login from "./Login";
 import ChangeDivColor from "./ChangeDivColor";
 import ParentComponent from "./LifeCycle/ParentComponent";
 import MaterialUISample from "./MaterialUISample";
+import SampleLayout from "./SampleLayout";
 
 class Routers extends Component {
   render() {
@@ -23,6 +24,7 @@ class Routers extends Component {
           {/* <Link to="/apirequest">API Request</Link> */}
           <Link to="/login">Login</Link>
           <Link to="/materialuisample">Material UI</Link>
+          <Link to="/samplelayout">Sample Layout</Link>
         </nav>
 
         <Routes>
@@ -36,6 +38,7 @@ class Routers extends Component {
             element={<ParentComponent />}
           />
           <Route path="/materialuisample" element={<MaterialUISample />} />
+          <Route path="/samplelayout" element={<SampleLayout />} />
         </Routes>
       </Router>
     );
