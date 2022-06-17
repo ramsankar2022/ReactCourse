@@ -136,6 +136,7 @@ export default class MaterialUISample extends React.Component {
           <Grid item xs={12}>
             <Item>
               <h3 style={{ textAlign: "center" }}>ASSIGNMENT 4</h3>
+              <p style={{ textAlign: "center" }}>(Developed using Class Component)</p>
             </Item>
           </Grid>
         </Grid>

@@ -8,8 +8,8 @@ import StateVariables from "./StateVariables";
 import Login from "./Login";
 import ChangeDivColor from "./ChangeDivColor";
 import ParentComponent from "./LifeCycle/ParentComponent";
-import MaterialUISample from "./MaterialUISample";
-// import SampleLayout from "./SampleLayout";
+// import MaterialUISample from "./MaterialUISample";
+import FuncComponents from "./FunctionalComponents/FuncComponent";
 
 class Routers extends Component {
   render() {
@@ -21,10 +21,9 @@ class Routers extends Component {
           <Link to="/statevariables">State Variables</Link>
           <Link to="/changedivcolor">Change Color</Link>
           <Link to="/lifecycle/parentcomponent">Life Cycle</Link>
-          {/* <Link to="/apirequest">API Request</Link> */}
           <Link to="/login">Login</Link>
-          <Link to="/materialuisample">Material UI</Link>
-          {/* <Link to="/samplelayout">Sample Layout</Link> */}
+          {/* <Link to="/materialuisample">Material UI</Link> */}
+          <Link to="/FunctionalComponents/FuncComponent">Func Component </Link>
         </nav>
 
         <Routes>
@@ -37,8 +36,11 @@ class Routers extends Component {
             path="/lifecycle/parentcomponent"
             element={<ParentComponent />}
           />
-          <Route path="/materialuisample" element={<MaterialUISample />} />
-          {/* <Route path="/samplelayout" element={<SampleLayout />} /> */}
+          {/* <Route path="/materialuisample" element={<MaterialUISample />} /> */}
+          <Route
+            path="/FunctionalComponents/FuncComponent"
+            element={<FuncComponents />}
+          />
         </Routes>
       </Router>
     );
