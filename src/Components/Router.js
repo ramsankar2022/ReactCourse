@@ -10,6 +10,7 @@ import ChangeDivColor from "./ChangeDivColor";
 import ParentComponent from "./LifeCycle/ParentComponent";
 // import MaterialUISample from "./MaterialUISample";
 import FuncComponents from "./FunctionalComponents/FuncComponent";
+import CreateUser from './CreateUser'
 
 class Routers extends Component {
   render() {
@@ -24,6 +25,7 @@ class Routers extends Component {
           <Link to="/login">Login</Link>
           {/* <Link to="/materialuisample">Material UI</Link> */}
           <Link to="/FunctionalComponents/FuncComponent">Func Component </Link>
+          <Link to="/createuser">Create User </Link>
         </nav>
 
         <Routes>
@@ -40,6 +42,10 @@ class Routers extends Component {
           <Route
             path="/FunctionalComponents/FuncComponent"
             element={<FuncComponents />}
+          />
+          <Route
+            path="/createuser"
+            element={<CreateUser />}
           />
         </Routes>
       </Router>
